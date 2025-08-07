@@ -1,81 +1,78 @@
 import React from 'react';
 import { Mail, Linkedin, Github, Send, MapPin, Phone } from 'lucide-react';
+import { FaWhatsapp , FaInstagram} from 'react-icons/fa';
 
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    alert('Thank you for your message! I\'ll get back to you soon.');
+    alert("Thank you for your message! I'll get back to you soon.");
   };
 
   return (
     <section id="contact" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
+        {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Let's connect and discuss opportunities, projects, or just have a conversation about technology
+            Let's connect and discuss opportunities, projects, or just have a conversation about technology.
           </p>
         </div>
 
+        {/* Main Grid */}
         <div className="grid md:grid-cols-2 gap-12">
-          {/* Contact Information */}
+          {/* Left Column: Contact Info & Socials */}
           <div className="space-y-8">
+            {/* Contact Info */}
             <div>
               <h3 className="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
               <div className="space-y-4">
+                {/* Email */}
                 <div className="flex items-center gap-4">
                   <div className="bg-blue-100 p-3 rounded-lg">
                     <Mail className="text-blue-600" size={24} />
                   </div>
                   <div>
                     <p className="text-gray-600">Email</p>
-                    <a
-                      href="mailto:umangkumarravi123@gmail.com"
-                      className="text-blue-600 hover:text-blue-700 font-medium"
-                    >
+                    <a href="mailto:umangkumarravi123@gmail.com" className="text-blue-600 hover:text-blue-700 font-medium">
                       umangkumarravi123@gmail.com
                     </a>
                   </div>
                 </div>
+
+                {/* Phone */}
                 <div className="flex items-center gap-4">
-  <div className="bg-blue-100 p-3 rounded-lg">
-    <Phone className="text-blue-600" size={24} />
-  </div>
-  <div>
-    <p className="text-gray-600">Phone</p>
-    <a
-      href="tel:+919258405605"
-      className="text-blue-600 hover:text-blue-700 font-medium"
-    >
-      +91 9258405605
-    </a>
-  </div>
-</div>
+                  <div className="bg-blue-100 p-3 rounded-lg">
+                    <Phone className="text-blue-600" size={24} />
+                  </div>
+                  <div>
+                    <p className="text-gray-600">Phone</p>
+                    <a href="tel:+919258405605" className="text-blue-600 hover:text-blue-700 font-medium">
+                      +91 9258405605
+                    </a>
+                  </div>
+                </div>
+
+                {/* WhatsApp */}
                 <div className="flex items-center gap-4">
-  <div className="bg-blue-100 p-3 rounded-lg">
-    <img
-      src="https://cdn-icons-png.flaticon.com/512/124/124034.png"
-      alt="WhatsApp"
-      className="w-6 h-6"
-    />
-  </div>
-  <div>
-    <p className="text-gray-600">WhatsApp</p>
-    <a
-      href="https://wa.me/919258405605"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-600 hover:text-blue-700 font-medium"
-    >
-      Message on WhatsApp
-    </a>
-  </div>
-</div>
+                  <div className="bg-blue-100 p-3 rounded-lg">
+                    <FaWhatsapp className="text-green-600" size={24} />
+                  </div>
+                  <div>
+                    <p className="text-gray-600">WhatsApp</p>
+                    <a
+                      href="https://wa.me/919258405605"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-700 font-medium"
+                    >
+                      Message on WhatsApp
+                    </a>
+                  </div>
+                </div>
 
-
-
+                {/* Location */}
                 <div className="flex items-center gap-4">
                   <div className="bg-blue-100 p-3 rounded-lg">
                     <MapPin className="text-blue-600" size={24} />
@@ -96,6 +93,7 @@ const Contact = () => {
                   href="https://www.linkedin.com/in/umang-kumar-3rd-193ab2279/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="LinkedIn"
                   className="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 transform hover:scale-105"
                 >
                   <Linkedin size={24} />
@@ -104,16 +102,27 @@ const Contact = () => {
                   href="https://github.com/umangkumar612"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="GitHub"
                   className="bg-gray-800 text-white p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200 transform hover:scale-105"
                 >
                   <Github size={24} />
                 </a>
                 <a
                   href="mailto:umangkumarravi123@gmail.com"
+                  aria-label="Email"
                   className="bg-green-600 text-white p-3 rounded-lg hover:bg-green-700 transition-colors duration-200 transform hover:scale-105"
                 >
                   <Mail size={24} />
                 </a>
+                <a
+                href="https://www.instagram.com/umang___kataria_/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+    className="bg-pink-500 text-white p-3 rounded-lg hover:bg-pink-600 transition-colors duration-200 transform hover:scale-105"
+  >
+    <FaInstagram size={24} />
+  </a>
               </div>
             </div>
 
@@ -132,7 +141,7 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
+          {/* Right Column: Contact Form */}
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold text-gray-800 mb-6">Send Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
