@@ -1,5 +1,6 @@
   import React from 'react';
   import { ArrowDown, Download } from 'lucide-react';
+  import umangPhoto from '../assets/umang.jpg';
 
   const Hero = () => {
     const scrollToAbout = () => {
@@ -23,6 +24,13 @@
               <h1 className="text-5xl md:text-7xl font-bold text-gray-800 mb-6">
                 Hi, I'm <span className="text-blue-600">Umang</span>
               </h1>
+                <div className="flex justify-center">
+              <img
+                src={umangPhoto}
+                alt="Umang Kumar"
+                className="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full border-4 border-white shadow-lg hover:scale-105 transition-transform duration-300"
+              />
+            </div>
         <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
     A final-year CSE student at Galgotias University, passionate about building web apps with
     the MERN stack and turning ideas into clean, functional code.

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Code, GraduationCap as Graduation, Heart } from 'lucide-react';
-import umangPhoto from '../assets/umang.jpg'; // Make sure this path is correct
+// import umangPhoto from '../assets/umang.jpg'; // Make sure this path is correct
 
 const About = () => {
   return (
@@ -59,13 +59,13 @@ const About = () => {
 
           {/* RIGHT SIDE CONTENT WITH IMAGE */}
           <div className="relative space-y-6">
-            <div className="flex justify-center">
+            {/* <div className="flex justify-center">
               <img
                 src={umangPhoto}
                 alt="Umang Kumar"
                 className="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full border-4 border-white shadow-lg hover:scale-105 transition-transform duration-300"
               />
-            </div>
+            </div> */}
 
             <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg p-8 text-white">
               <h3 className="text-2xl font-bold mb-6">Quick Facts</h3>
